@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sbenshop – Guides pour vendre en ligne avec ton téléphone</title>
+<meta name="description" content="Guides pratiques pour lancer et vendre ton premier produit digital avec ton téléphone, même sans budget.">
+<meta name="theme-color" content="#0f6b4f">
+<style>
+:root{--g:#0f6b4f;--g2:#0a4a37;--o:#f59e0b;--bg:#fbf8f2;--ink:#1b1f1d;--mut:#5b6560;--card:#fff;--line:#e8e2d6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:10;background:rgba(251,248,242,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:800;font-size:19px;color:var(--g)}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;border:0;cursor:pointer;text-align:center}
+.btn-p{background:var(--o);color:#1b1305}
+.btn-g{background:var(--g);color:#fff}
+.btn-o{border:2px solid var(--g);color:var(--g)}
+.btn-sm{padding:8px 14px;font-size:14px}
+.hero{background:linear-gradient(160deg,var(--g2),var(--g));color:#fff;padding:54px 0 60px}
+.tag{display:inline-block;background:rgba(255,255,255,.15);padding:5px 12px;border-radius:99px;font-size:13px;margin-bottom:16px}
+h1{font-size:clamp(28px,7vw,46px);line-height:1.15;margin-bottom:14px}
+.hero p{font-size:18px;opacity:.92;max-width:560px;margin-bottom:24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn-o{border-color:#fff;color:#fff}
+.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;font-size:14px;opacity:.95}
+section{padding:46px 0}
+h2{font-size:clamp(24px,5.5vw,32px);margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:26px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.cover{height:230px;display:flex;align-items:center;justify-content:center;position:relative;background:#efe8d8}
+.book{width:128px;height:178px;border-radius:4px 10px 10px 4px;padding:14px 12px 12px 18px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:6px 8px 16px rgba(0,0,0,.28);overflow:hidden}
+.book:before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:rgba(0,0,0,.22)}
+.book:after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.12)}
+.book .ic{font-size:34px;line-height:1}
+.book .bt{font-weight:800;font-size:15px;line-height:1.15;text-transform:uppercase;letter-spacing:.2px}
+.book .bs{font-size:9.5px;opacity:.9;line-height:1.25}
+.book .bb{font-size:8.5px;opacity:.8;letter-spacing:1px;text-transform:uppercase}
+.c1{background:linear-gradient(160deg,#0a4a37,#16a37a)}
+.c2{background:linear-gradient(160deg,#7c2d12,#f97316)}
+.c3{background:linear-gradient(160deg,#1e3a8a,#3b82f6)}
+.c4{background:linear-gradient(160deg,#5b21b6,#a78bfa)}
+.pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .6s ease}
+.card:hover .pimg,.card:hover .book{transform:scale(1.06)}
+.book{transition:transform .5s ease;animation:floaty 4s ease-in-out infinite}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.55)}50%{box-shadow:0 0 0 10px rgba(245,158,11,0)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btn-p{animation:pulse 2.2s infinite}
+.btn{transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.hero .tag,.hero h1,.hero p,.hero .cta,.hero .trust{animation:rise .8s both}
+.hero h1{animation-delay:.12s}.hero p{animation-delay:.24s}.hero .cta{animation-delay:.36s}.hero .trust{animation-delay:.5s}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.card{transition:box-shadow .3s,transform .7s ease,opacity .7s ease}
+.card.in:hover{box-shadow:0 14px 30px rgba(0,0,0,.14);transform:translateY(-4px)}
+.badge{z-index:2;animation:pop 1.8s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.badge{position:absolute;top:12px;right:12px;background:#fff;color:#b91c1c;font-size:12px;padding:3px 9px;border-radius:99px}
+.badge.free{color:var(--g)}
+.body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.body h3{font-size:16px;line-height:1.3}
+.body p{font-size:14px;color:var(--mut);flex:1}
+.price{font-size:22px;font-weight:800;color:var(--g)}
+.price s{font-size:14px;color:var(--mut);font-weight:400;margin-left:6px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.num{width:36px;height:36px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:10px}
+.alt{background:#f2ecdf}
+.help{background:var(--g);color:#fff;border-radius:20px;padding:28px;text-align:center}
+.help p{opacity:.92;margin:8px 0 18px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--mut);font-size:15px}
+footer{background:#14211c;color:#cfd8d3;padding:32px 0 90px;font-size:14px;text-align:center}
+footer b{color:#fff}
+.float{position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);z-index:20}
+.float .btn{display:block;width:100%;max-width:520px;margin:0 auto}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">Sbenshop</a>
+  <a class="btn btn-g btn-sm" href="#guides">Voir les guides</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <span class="tag">Guides pratiques · Afrique francophone</span>
+  <h1>Vends ton premier produit digital avec ton téléphone.</h1>
+  <p>Des guides simples, étape par étape, même sans expérience ni budget. Tu paies, tu télécharges, tu commences aujourd'hui.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="#guides">Voir les guides</a>
+    <a class="btn btn-o" id="wa1" href="#">Poser une question</a>
+  </div>
+  <div class="trust"><span>🔒 Paiement sécurisé</span><span>📱 Lisible sur téléphone</span><span>⚡ Téléchargement immédiat</span></div>
+</div></div>
+
+<section id="guides"><div class="wrap">
+  <h2>Choisis ton guide</h2>
+  <p class="sub">Promotions en cours sur tous les guides payants.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="cover"><img class="pimg" loading="lazy" alt="Vends ton 1er produit digital" onerror="this.remove()" src="https://images.chariowcdn.com/cdn-cgi/image/format=auto,onerror=redirect,quality=medium-high,slow-connection-quality=50/https://assets.chariowcdn.com/assets/store_6f7ycshm3kda/8ddFggIBAS9EcxEFO13jhI1zNJnyeN3jJiEwtWms.jpg"><span class="badge">-50 %</span><div class="book c1"><div class="ic">📱</div><div><div class="bt">Vends ton 1er produit digital</div><div class="bs">Avec ton téléphone, sans budget</div></div><div class="bb">Sbenshop</div></div></div>
+      <div class="body">
+        <h3>Vends ton 1er produit digital avec ton téléphone</h3>
+        <p>PDF de 12 pages : choisir ton idée, créer le PDF, le publier sur Chariow et partager ton lien. Tout depuis ton téléphone.</p>
+        <div class="price">5 000 FCFA<s>10 000 FCFA</s></div>
+        <a class="btn btn-p" href="https://pfupheiw.mychariow.online/vends-ton-premier-produit-digital">Acheter maintenant</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cover"><img class="pimg" loading="lazy" alt="Business en ligne : le guide ultime" onerror="this.remove()" src="https://images.chariowcdn.com/cdn-cgi/image/format=auto,onerror=redirect,quality=medium-high,slow-connection-quality=50/https://assets.chariowcdn.com/assets/store_6f7ycshm3kda/9bSor1Qp8MGc02CBHJFGRFBfmIuxNZdNrPG0SIJL.png"><span class="badge">-70 %</span><div class="book c2"><div class="ic">🚀</div><div><div class="bt">Business en ligne</div><div class="bs">Le guide ultime pour créer, développer et réussir</div></div><div class="bb">Sbenshop</div></div></div>
+      <div class="body">
+        <h3>Business en Ligne : Le Guide Ultime</h3>
+        <p>Pour créer, développer et réussir ton activité en ligne.</p>
+        <div class="price">4 500 FCFA<s>15 000 FCFA</s></div>
+        <a class="btn btn-p" href="https://pfupheiw.mychariow.online/prd_g5hvdfsy">Acheter maintenant</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cover"><img class="pimg" loading="lazy" alt="Étudiant + IA" onerror="this.remove()" src="https://images.chariowcdn.com/cdn-cgi/image/format=auto,onerror=redirect,quality=medium-high,slow-connection-quality=50/https://assets.chariowcdn.com/assets/store_6f7ycshm3kda/5Ci7Pq0S2uCLyPJh3Uz8iZYCQfRWtKRE5U3xFg8E.png"><span class="badge">-33 %</span><div class="book c3"><div class="ic">🎓</div><div><div class="bt">Étudiant + IA</div><div class="bs">Réussis tes études et gagne tes premiers FCFA</div></div><div class="bb">Sbenshop</div></div></div>
+      <div class="body">
+        <h3>Étudiant + IA : réussir tes études et gagner tes premiers FCFA</h3>
+        <p>PDF de 14 pages : méthode R.C.T.F., 36 prompts prêts à copier, 7 services à vendre sur le campus et un plan de 30 jours.</p>
+        <div class="price">2 000 FCFA<s>3 000 FCFA</s></div>
+        <a class="btn btn-p" href="https://pfupheiw.mychariow.online/prd_jb1uz04h">Acheter maintenant</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cover"><img class="pimg" loading="lazy" alt="Crée ta boutique sur Chariow" onerror="this.remove()" src="https://images.chariowcdn.com/cdn-cgi/image/format=auto,onerror=redirect,quality=medium-high,slow-connection-quality=50/https://assets.chariowcdn.com/assets/store_6f7ycshm3kda/8yXcVCk7r6xJMjbsT8u0C4L1dOG5AGsNDLnkjmsz.png"><span class="badge free">Gratuit</span><div class="book c4"><div class="ic">🛍️</div><div><div class="bt">Crée ta boutique</div><div class="bs">Ta boutique et ton produit digital sur Chariow</div></div><div class="bb">Sbenshop · Gratuit</div></div></div>
+      <div class="body">
+        <h3>Comment créer ta boutique et ton produit digital sur Chariow</h3>
+        <p>Formation gratuite en 3 parties (environ 1 h de vidéos) : de zéro à ta première vente.</p>
+        <div class="price">Gratuit</div>
+        <a class="btn btn-g" href="https://pfupheiw.mychariow.online/prd_r66kbtgt">Accéder gratuitement</a>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>Comment commander</h2>
+  <p class="sub">Trois étapes, moins de 3 minutes.</p>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><b>Choisis</b><p>Sélectionne le guide qui correspond à ton objectif.</p></div>
+    <div class="step"><div class="num">2</div><b>Paie</b><p>Paiement sécurisé sur Chariow, ou par Mobile Money via WhatsApp.</p></div>
+    <div class="step"><div class="num">3</div><b>Reçois</b><p>Télécharge ton guide tout de suite et lis-le sur ton téléphone.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="help">
+    <h2>Une question avant d'acheter ?</h2>
+    <p>Écris-nous sur WhatsApp, on te répond et on t'aide à choisir le bon guide.</p>
+    <a class="btn btn-p" id="wa2" href="#">Discuter sur WhatsApp</a>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <p class="sub">&nbsp;</p>
+  <details><summary>Comment je paie ?</summary><p>Par le paiement sécurisé Chariow, ou par Mobile Money en nous écrivant sur WhatsApp.</p></details>
+  <details><summary>Quand je reçois mon guide ?</summary><p>Juste après le paiement : tu peux le télécharger immédiatement.</p></details>
+  <details><summary>Je peux lire sur mon téléphone ?</summary><p>Oui, les guides sont faits pour être lus sur téléphone.</p></details>
+  <details><summary>Je n'ai jamais rien vendu, c'est pour moi ?</summary><p>Oui. Commence par la formation gratuite, puis passe au guide de départ.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><b>Sbenshop</b> · Guides pratiques pour vendre en ligne</p>
+  <p style="margin-top:6px">© 2026 Sbenshop</p>
+</div></footer>
+
+<div class="float"><a class="btn btn-p" href="#guides">Voir les guides</a></div>
+
+<script>
+var WHATSAPP = "2250706249923";
+var els = document.querySelectorAll(".card,.step,.help,details");
+els.forEach(function(e,i){ e.classList.add("reveal"); e.style.transitionDelay = ((i%4)*90)+"ms"; });
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function(list){
+    list.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+} else { els.forEach(function(e){ e.classList.add("in"); }); }
+var msg = encodeURIComponent("Bonjour, je veux plus d'infos sur vos guides.");
+["wa1","wa2"].forEach(function(id){
+  var el = document.getElementById(id);
+  if (el) el.href = "https://wa.me/" + WHATSAPP + "?text=" + msg;
+});
+</script>
+</body>
+</html>
